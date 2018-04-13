@@ -36,7 +36,6 @@ ADD ./laravel.ini /usr/local/etc/php/conf.d
 ADD ./laravel.pool.conf /usr/local/etc/php-fpm.d/www.conf
 COPY ./opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 ##TODO copy supervisor config
-RUN rm -r /var/lib/apt/lists/*
 COPY ./docker-php-entrypoint.sh /usr/local/bin/docker-php-entrypoint
 RUN chmod 0777 /usr/local/bin/docker-php-entrypoint
 
